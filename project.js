@@ -50,7 +50,6 @@ const deposit = ()=>{
             return numberDepositAmount
         }
 
-
     }
 } 
 //number of lines user want to enter
@@ -68,8 +67,6 @@ const getNumberOfLines = ()=>{
             else{
                 return numberOfLines
             }
-    
-    
         }
     }
 
@@ -87,12 +84,10 @@ const getBet = (balance, lines)=>{
             else{
                 return numberBet
             }
-    
-    
         }
 }
 
-
+//spin the slot
 const spin = ()=>{
     const symbols = []
     for(const [symbol, count] of Object.entries(SYMBOLS_COUNT)){
@@ -114,6 +109,7 @@ const spin = ()=>{
     return reels
 }
 
+//transpose matrix (from column to row)
 const transpose = (reels)=>{
     const rows = []
 
@@ -126,6 +122,7 @@ const transpose = (reels)=>{
     return rows
     
 }
+//printing rows
 const printRows = (rows)=>{
     for(const row of rows ){
         let rowString = ""
@@ -138,7 +135,7 @@ const printRows = (rows)=>{
         console.log(rowString);
     }
 }
-
+// get winner
 const getWinnings = (rows, bet, lines)=>{
     let winnings = 0
     
